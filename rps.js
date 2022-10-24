@@ -1,11 +1,3 @@
-// Initalize results counter
-const results = document.querySelector("#round-results");
-const playerScore = document.querySelector('#player-score');
-const computerScore = document.querySelector('#computer-score');
-
-let playerPoints = 0;
-let computerPoints = 0;
-
 // Iterate through each button
 const optionBtns = document.querySelectorAll('.btn');
 optionBtns.forEach((button, index) => {
@@ -26,6 +18,13 @@ function getComputerChoice() {
         case 3: return "scissors";
     }
 }
+// Initalize results counter
+const results = document.querySelector("#round-results");
+const playerScore = document.querySelector('#player-score');
+const computerScore = document.querySelector('#computer-score');
+
+let playerPoints = 0;
+let computerPoints = 0;
 
 // Click -> Play a round
 function playRound(playerSelection = "No input was received.", computerSelection) {
@@ -57,6 +56,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
             case "scissors": 
                 results.textContent = "You lose. Scissors beats Rock."; 
                 computerScore.textContent = ++computerPoints;
+                
                 break;
         }
     } else if (playerSelection.toLowerCase() == "scissors") {
@@ -74,11 +74,4 @@ function playRound(playerSelection = "No input was received.", computerSelection
                 break;
         }
     }
-}
-
-function animateResults(winner) {
-    if (winner == "player") {
-
-    }
-
 }
