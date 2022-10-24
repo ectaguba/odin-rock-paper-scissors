@@ -57,7 +57,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
                 break;
         }
 
-    } else if (playerSelection == "scissors") {
+    } else if (playerSelection == "Scissors") {
         switch (computerSelection) {
             case "rock": 
                 results.textContent = "You lose. Rock beats Scissors.";
