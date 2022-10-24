@@ -9,14 +9,9 @@ let computerPoints = 0;
 // Iterate through each button
 const optionBtns = document.querySelectorAll('.btn');
 optionBtns.forEach((button) => {
-    let playerSelection = button.textContent;
+    let playerSelection = button.textContent; // Pass text content into playRound as parameter
     button.addEventListener("click", () => playRound(playerSelection, getComputerChoice()));
 })
-
-// Add event listeners to each button
-
-// Pass button textContent to playerSelection parameter
-
 
 // Randomize computer choice
 function getComputerChoice() {
@@ -33,7 +28,6 @@ function playRound(playerSelection = "No input was received.", computerSelection
 
     // Compare player selections to computer selection
     // Increment counter
-    // Animate counter and results (separate function)
     if (playerSelection == "Rock") {
         switch (computerSelection) {
             case "rock": 
@@ -82,7 +76,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
 
 function animateResults(winner) {
     if (winner == "player") {
-        
+
     }
 
 }
