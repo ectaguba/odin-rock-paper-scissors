@@ -8,9 +8,13 @@ let computerPoints = 0;
 
 // Iterate through each button
 const optionBtns = document.querySelectorAll('.btn');
-optionBtns.forEach((button) => {
+optionBtns.forEach((button, index) => {
     let playerSelection = button.textContent; // Pass text content into playRound as parameter
-    button.addEventListener("click", () => playRound(playerSelection, getComputerChoice()));
+    button.addEventListener("click", () => {
+        optionBtns[index].classList.add('pressed');
+        playRound(playerSelection, getComputerChoice())
+    }); // click to play round
+    button.addEventListener("transitionend", () => optionBtns[index].classList.remove('pressed')); // animate press
 })
 
 // Randomize computer choice
@@ -25,7 +29,6 @@ function getComputerChoice() {
 
 // Click -> Play a round
 function playRound(playerSelection = "No input was received.", computerSelection) {
-
     // Compare player selections to computer selection
     // Increment counter
     if (playerSelection.toLowerCase() == "rock") {
