@@ -28,7 +28,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
 
     // Compare player selections to computer selection
     // Increment counter
-    if (playerSelection == "Rock") {
+    if (playerSelection.toLowerCase == "rock") {
         switch (computerSelection) {
             case "rock": 
                 results.textContent = "You tied!"; 
@@ -42,7 +42,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
                 playerScore.textContent = ++playerPoints;
                 break;
         }
-    } else if (playerSelection == "Paper") {
+    } else if (playerSelection.toLowerCase == "paper") {
         switch (computerSelection) {
             case "rock": 
                 results.textContent = "You win! Paper beats Rock.";
@@ -57,7 +57,7 @@ function playRound(playerSelection = "No input was received.", computerSelection
                 break;
         }
 
-    } else if (playerSelection == "Scissors") {
+    } else if (playerSelection.toLowerCase == "scissors") {
         switch (computerSelection) {
             case "rock": 
                 results.textContent = "You lose. Rock beats Scissors.";
