@@ -4,13 +4,28 @@
     <h1 id="header">ROCK PAPER SCISSORS</h1>
 </head>
 <body>
-    <div id="btn-container">
-        <button id="rockBtn">ROCK</button>
-        <button id="paperBtn">PAPER</button>
-        <button id="scissorsBtn">SCISSORS</button>
+    <div id="optionBtns">
+        <button class="btn">Rock</button>
+        <button class="btn">Paper</button>
+        <button class="btn">Scissors</button>
     </div>
-    <div id="results"></div>
-    <script src="rps.js"></script>
+    <div id="score-section">
+        <p id="round-results">Click a button above to play your move!</p>
+        <div id="counters">
+            <table>
+                <tr>
+                    <th>Player:</th>
+                    <th>Computer:</th>
+                </tr>
+                <tr>
+                    <td id="player-score">0</td>
+                    <td id="computer-score">0</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="rps.js">
+    </script>
 </body>
 <footer>
 
